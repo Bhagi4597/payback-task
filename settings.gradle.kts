@@ -1,3 +1,3 @@
 
-rootProject.name = "SampleTest"
+rootProject.name = "Payback"
 

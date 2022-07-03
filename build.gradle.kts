@@ -1,12 +1,10 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.jetbrains.kotlin.ir.backend.js.compile
 
 plugins {
-    kotlin("jvm") version "1.6.21"
-    application
+    java
+    kotlin("jvm") version "1.6.10"
 }
 
-group = "org.example"
+group = "org.payback"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -14,27 +12,15 @@ repositories {
 }
 
 dependencies {
-    implementation("org.testng:testng:7.1.0")
-    implementation("junit:junit:4.13.1")
-    testImplementation(kotlin("test"))
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("io.appium:java-client:7.3.0")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
-    implementation("org.testng:testng:6.14.3")
+    implementation("io.appium:java-client:8.1.1")
+    testImplementation("org.seleniumhq.selenium:selenium-support:4.2.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
+    testImplementation("org.junit.vintage:junit-vintage-engine:5.8.2")
+    testImplementation("io.cucumber:cucumber-java:7.3.3")
+    testImplementation("io.cucumber:cucumber-junit:7.3.3")
 }
 
-tasks.test {
+tasks.getByName<Test>("test") {
     useJUnitPlatform()
-}
-tasks.withType<Test> {
-    useJUnitPlatform()
-}
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
-}
-
-application {
-    mainClass.set("MainKt")
 }

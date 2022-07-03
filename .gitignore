@@ -3,6 +3,8 @@
 
 # Log file
 *.log
+*.idea
+*.build
 
 # BlueJ files
 *.ctxt
