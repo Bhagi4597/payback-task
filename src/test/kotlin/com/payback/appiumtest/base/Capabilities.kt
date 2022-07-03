@@ -7,7 +7,7 @@ class Capabilities {
             caps.setCapability("platformName", "Android")
             caps.setCapability("automationName", "UiAutomator2")
             caps.setCapability("deviceName", "Galaxy A32")
-            caps.setCapability("udid","RZ8RB1VBAMP")
+            caps.setCapability("udid","")
             caps.setCapability("appActivity", "de.payback.app.deeplinks.StarterActivity")
             caps.setCapability("appPackage", "de.payback.client.android")
             return caps
