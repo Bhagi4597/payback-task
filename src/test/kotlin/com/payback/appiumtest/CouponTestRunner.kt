@@ -9,4 +9,4 @@ import io.cucumber.junit.CucumberOptions
     plugin = ["pretty", "html:target/cucumber-report.html"],
     features = ["src/test/resources"]
 )
-class CucumberTest
+class CouponTestRunner
