@@ -19,10 +19,13 @@ For more information https://github.com/appium/appium/blob/master/docs/en/driver
 ### Run the test
 Start appium server then use the test task like normal gradle project. 
 ```
-./gradlew test 
+./gradlew test  
 ```
 
 ## Writing the test
 
 ### Finding the element ID
 We have use appium inspector tool for find element such as XPath or ID.
+
+## Report
+  located at path src/target
