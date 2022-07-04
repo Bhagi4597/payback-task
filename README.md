@@ -28,4 +28,4 @@ Start appium server then use the test task like normal gradle project.
 We have use appium inspector tool for find element such as XPath or ID.
 
 ## Report
-  located at path src/target
+  once we run the test. report will be genererated at path `src/target`
